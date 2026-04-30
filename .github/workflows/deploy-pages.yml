@@ -33,6 +33,9 @@ jobs:
       - name: Prepare demo data
         run: npm run seed && cp data/db.json public/demo-db.json
 
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
       - name: Build static site
         run: NEXT_PUBLIC_STATIC_DEMO=true NEXT_PUBLIC_BASE_PATH="/${GITHUB_REPOSITORY#*/}" npm run build
 
