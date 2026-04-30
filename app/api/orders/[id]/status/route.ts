@@ -3,6 +3,12 @@ import { nextStep, progressForStep, workflowForPackage } from "@/lib/workflow";
 import { readStore, writeStore } from "@/lib/store";
 import type { StatusLog } from "@/lib/types";
 
+export const dynamic = "force-static";
+
+export function generateStaticParams() {
+  return readStore().serviceOrders.map((order) => ({ id: order.id }));
+}
+
 const id = (prefix: string) => `${prefix}_${crypto.randomUUID().slice(0, 8)}`;
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {

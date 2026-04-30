@@ -1,0 +1,785 @@
+{
+  "customers": [
+    {
+      "id": "cus_2595010b",
+      "name": "Nimal Perera",
+      "phone": "0771234567",
+      "createdAt": "2026-04-30T07:50:29.437Z"
+    },
+    {
+      "id": "cus_a84c11f0",
+      "name": "Kasun Silva",
+      "phone": "0715588001",
+      "createdAt": "2026-04-30T07:50:29.437Z"
+    },
+    {
+      "id": "cus_725c7cd2",
+      "name": "Amanda Fernando",
+      "phone": "0764441199",
+      "createdAt": "2026-04-30T07:50:29.437Z"
+    },
+    {
+      "id": "cus_e59470d1",
+      "name": "Ruwan Jayasinghe",
+      "phone": "0752244668",
+      "createdAt": "2026-04-30T07:50:29.437Z"
+    },
+    {
+      "id": "cus_e456f3bc",
+      "name": "Chamath Wijesinghe",
+      "phone": "0729854100",
+      "createdAt": "2026-04-30T07:50:29.437Z"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "veh_7bc0fd8d",
+      "plateNumber": "CAB-4589",
+      "normalizedPlateNumber": "CAB4589",
+      "make": "Toyota",
+      "model": "Corolla",
+      "color": "White",
+      "customerId": "cus_2595010b",
+      "customer": {
+        "id": "cus_2595010b",
+        "name": "Nimal Perera",
+        "phone": "0771234567",
+        "createdAt": "2026-04-30T07:50:29.437Z"
+      },
+      "createdAt": "2026-04-30T07:50:29.437Z",
+      "updatedAt": "2026-04-30T07:50:29.437Z"
+    },
+    {
+      "id": "veh_2b18d79f",
+      "plateNumber": "WP-CAR-2211",
+      "normalizedPlateNumber": "WPCAR2211",
+      "make": "Toyota",
+      "model": "Aqua",
+      "color": "Silver",
+      "customerId": "cus_a84c11f0",
+      "customer": {
+        "id": "cus_a84c11f0",
+        "name": "Kasun Silva",
+        "phone": "0715588001",
+        "createdAt": "2026-04-30T07:50:29.437Z"
+      },
+      "createdAt": "2026-04-30T07:50:29.437Z",
+      "updatedAt": "2026-04-30T07:50:29.437Z"
+    },
+    {
+      "id": "veh_bf021089",
+      "plateNumber": "ABC-1234",
+      "normalizedPlateNumber": "ABC1234",
+      "make": "Honda",
+      "model": "Vezel",
+      "color": "Black",
+      "customerId": "cus_725c7cd2",
+      "customer": {
+        "id": "cus_725c7cd2",
+        "name": "Amanda Fernando",
+        "phone": "0764441199",
+        "createdAt": "2026-04-30T07:50:29.437Z"
+      },
+      "createdAt": "2026-04-30T07:50:29.437Z",
+      "updatedAt": "2026-04-30T07:50:29.437Z"
+    },
+    {
+      "id": "veh_2096b48e",
+      "plateNumber": "CAA-7788",
+      "normalizedPlateNumber": "CAA7788",
+      "make": "Suzuki",
+      "model": "Swift",
+      "color": "Red",
+      "customerId": "cus_e59470d1",
+      "customer": {
+        "id": "cus_e59470d1",
+        "name": "Ruwan Jayasinghe",
+        "phone": "0752244668",
+        "createdAt": "2026-04-30T07:50:29.437Z"
+      },
+      "createdAt": "2026-04-30T07:50:29.437Z",
+      "updatedAt": "2026-04-30T07:50:29.437Z"
+    },
+    {
+      "id": "veh_74497376",
+      "plateNumber": "KI-9090",
+      "normalizedPlateNumber": "KI9090",
+      "make": "Nissan",
+      "model": "Leaf",
+      "color": "Blue",
+      "customerId": "cus_e456f3bc",
+      "customer": {
+        "id": "cus_e456f3bc",
+        "name": "Chamath Wijesinghe",
+        "phone": "0729854100",
+        "createdAt": "2026-04-30T07:50:29.437Z"
+      },
+      "createdAt": "2026-04-30T07:50:29.437Z",
+      "updatedAt": "2026-04-30T07:50:29.437Z"
+    }
+  ],
+  "serviceItems": [
+    {
+      "id": "item_6ae113fa",
+      "name": "Exterior wash",
+      "category": "Quick Wash",
+      "estimatedDurationMinutes": 20,
+      "price": 1800,
+      "description": "Foam wash and rinse"
+    },
+    {
+      "id": "item_aa0cf85c",
+      "name": "Drying",
+      "category": "Quick Wash",
+      "estimatedDurationMinutes": 10,
+      "price": 600,
+      "description": "Microfiber body drying"
+    },
+    {
+      "id": "item_f4e3ca80",
+      "name": "Tyre shine",
+      "category": "Tyre & Wheel Service",
+      "estimatedDurationMinutes": 10,
+      "price": 700,
+      "description": "Tyre sidewall finishing"
+    },
+    {
+      "id": "item_9b790d3d",
+      "name": "Interior vacuum",
+      "category": "Interior Cleaning",
+      "estimatedDurationMinutes": 20,
+      "price": 1600,
+      "description": "Cabin and carpet vacuum"
+    },
+    {
+      "id": "item_402053f1",
+      "name": "Dashboard wipe",
+      "category": "Interior Cleaning",
+      "estimatedDurationMinutes": 10,
+      "price": 850,
+      "description": "Interior surface wipe down"
+    },
+    {
+      "id": "item_9c82ad87",
+      "name": "Floor mat cleaning",
+      "category": "Interior Cleaning",
+      "estimatedDurationMinutes": 15,
+      "price": 900,
+      "description": "Mat wash and dry"
+    },
+    {
+      "id": "item_d121a4d8",
+      "name": "Engine oil check/change",
+      "category": "Oil Change",
+      "estimatedDurationMinutes": 35,
+      "price": 8500,
+      "description": "Oil condition check and change"
+    },
+    {
+      "id": "item_27562e7c",
+      "name": "Oil filter check",
+      "category": "Oil Change",
+      "estimatedDurationMinutes": 10,
+      "price": 1600,
+      "description": "Inspect oil filter condition"
+    },
+    {
+      "id": "item_e5055e81",
+      "name": "Engine oil change",
+      "category": "Oil Change",
+      "estimatedDurationMinutes": 35,
+      "price": 9500,
+      "description": "Drain and replace engine oil"
+    },
+    {
+      "id": "item_64008d7e",
+      "name": "Oil filter replacement",
+      "category": "Oil Change",
+      "estimatedDurationMinutes": 15,
+      "price": 2400,
+      "description": "Replace oil filter"
+    },
+    {
+      "id": "item_a8647b6b",
+      "name": "Air filter check",
+      "category": "Normal Service",
+      "estimatedDurationMinutes": 10,
+      "price": 1000,
+      "description": "Inspect and clean air filter"
+    },
+    {
+      "id": "item_27ab5142",
+      "name": "Cabin filter check",
+      "category": "Full Service",
+      "estimatedDurationMinutes": 10,
+      "price": 1200,
+      "description": "Inspect cabin filter"
+    },
+    {
+      "id": "item_5138bef9",
+      "name": "Fluid level check",
+      "category": "Normal Service",
+      "estimatedDurationMinutes": 10,
+      "price": 800,
+      "description": "Check brake, coolant, and washer fluids"
+    },
+    {
+      "id": "item_3b633d1c",
+      "name": "Tyre pressure check",
+      "category": "Tyre & Wheel Service",
+      "estimatedDurationMinutes": 10,
+      "price": 500,
+      "description": "Set tyre pressure"
+    },
+    {
+      "id": "item_0ba3eff0",
+      "name": "Brake inspection",
+      "category": "Brake Inspection",
+      "estimatedDurationMinutes": 25,
+      "price": 3200,
+      "description": "Inspect pads, discs, and fluid"
+    },
+    {
+      "id": "item_cb2fceb6",
+      "name": "Coolant check",
+      "category": "Full Service",
+      "estimatedDurationMinutes": 10,
+      "price": 900,
+      "description": "Coolant level and leak check"
+    },
+    {
+      "id": "item_63f32f3b",
+      "name": "Battery check",
+      "category": "Diagnostic Scan",
+      "estimatedDurationMinutes": 10,
+      "price": 850,
+      "description": "Battery health test"
+    },
+    {
+      "id": "item_7eb4d735",
+      "name": "Diagnostic scan",
+      "category": "Diagnostic Scan",
+      "estimatedDurationMinutes": 25,
+      "price": 4500,
+      "description": "OBD diagnostic report"
+    },
+    {
+      "id": "item_48459dd1",
+      "name": "Interior deep vacuum",
+      "category": "Interior Cleaning",
+      "estimatedDurationMinutes": 30,
+      "price": 2600,
+      "description": "Detailed cabin vacuuming"
+    },
+    {
+      "id": "item_3078a87e",
+      "name": "Seat cleaning",
+      "category": "Interior Cleaning",
+      "estimatedDurationMinutes": 35,
+      "price": 3600,
+      "description": "Seat shampoo and wipe"
+    },
+    {
+      "id": "item_2ee1d654",
+      "name": "Dashboard polish",
+      "category": "Interior Cleaning",
+      "estimatedDurationMinutes": 15,
+      "price": 1400,
+      "description": "Interior polish application"
+    },
+    {
+      "id": "item_a70e7cc8",
+      "name": "Final quality check",
+      "category": "Full Service",
+      "estimatedDurationMinutes": 15,
+      "price": 1100,
+      "description": "Supervisor checklist"
+    }
+  ],
+  "servicePackages": [
+    {
+      "id": "pkg_7ff32205",
+      "name": "Quick Car Wash",
+      "category": "Quick Wash",
+      "description": "Fast exterior refresh for daily-drive vehicles.",
+      "estimatedDurationMinutes": 35,
+      "basePrice": 2800,
+      "includedItemIds": "[\"item_6ae113fa\",\"item_aa0cf85c\",\"item_f4e3ca80\"]"
+    },
+    {
+      "id": "pkg_8e7c31d1",
+      "name": "Wash + Vacuum",
+      "category": "Interior Cleaning",
+      "description": "Exterior wash with a practical cabin clean.",
+      "estimatedDurationMinutes": 65,
+      "basePrice": 5800,
+      "includedItemIds": "[\"item_6ae113fa\",\"item_9b790d3d\",\"item_402053f1\",\"item_9c82ad87\"]"
+    },
+    {
+      "id": "pkg_0fbbb959",
+      "name": "Normal Service",
+      "category": "Normal Service",
+      "description": "Routine maintenance with oil, fluids, filters, tyres, and wash.",
+      "estimatedDurationMinutes": 130,
+      "basePrice": 18500,
+      "includedItemIds": "[\"item_d121a4d8\",\"item_27562e7c\",\"item_a8647b6b\",\"item_5138bef9\",\"item_3b633d1c\",\"item_6ae113fa\"]"
+    },
+    {
+      "id": "pkg_437fd857",
+      "name": "Full Service",
+      "category": "Full Service",
+      "description": "Comprehensive scheduled service with diagnostics and finishing.",
+      "estimatedDurationMinutes": 210,
+      "basePrice": 38500,
+      "includedItemIds": "[\"item_e5055e81\",\"item_64008d7e\",\"item_a8647b6b\",\"item_27ab5142\",\"item_0ba3eff0\",\"item_cb2fceb6\",\"item_63f32f3b\",\"item_7eb4d735\",\"item_6ae113fa\",\"item_9b790d3d\",\"item_a70e7cc8\"]"
+    },
+    {
+      "id": "pkg_f7a78678",
+      "name": "Premium Detail",
+      "category": "Interior Cleaning",
+      "description": "Presentation-focused detail for handover-ready vehicles.",
+      "estimatedDurationMinutes": 160,
+      "basePrice": 24500,
+      "includedItemIds": "[\"item_6ae113fa\",\"item_48459dd1\",\"item_3078a87e\",\"item_2ee1d654\",\"item_f4e3ca80\",\"item_a70e7cc8\"]"
+    }
+  ],
+  "serviceOrders": [
+    {
+      "id": "ord_c14f03d1",
+      "orderNumber": "JOB-1024",
+      "vehicleId": "veh_7bc0fd8d",
+      "customerId": "cus_2595010b",
+      "selectedPackageId": "pkg_8e7c31d1",
+      "selectedItemIds": "[\"item_6ae113fa\",\"item_9b790d3d\",\"item_402053f1\",\"item_9c82ad87\"]",
+      "status": "Washing Bay",
+      "currentStep": "Washing Bay",
+      "progressPercentage": 60,
+      "priority": "Normal",
+      "assignedMechanic": "Saman",
+      "bay": "Bay 01",
+      "odometer": 35000,
+      "notes": "Seeded demo job",
+      "estimatedStartTime": "2026-04-30T07:07:29.437Z",
+      "estimatedFinishTime": "2026-04-30T08:55:29.437Z",
+      "actualStartTime": "2026-04-30T07:07:29.437Z",
+      "actualFinishTime": null,
+      "totalPrice": 5800,
+      "createdAt": "2026-04-30T07:07:29.437Z",
+      "updatedAt": "2026-04-30T07:50:29.437Z",
+      "completedAt": null,
+      "vehicle": {
+        "id": "veh_7bc0fd8d",
+        "plateNumber": "CAB-4589",
+        "normalizedPlateNumber": "CAB4589",
+        "make": "Toyota",
+        "model": "Corolla",
+        "color": "White",
+        "customerId": "cus_2595010b",
+        "customer": {
+          "id": "cus_2595010b",
+          "name": "Nimal Perera",
+          "phone": "0771234567",
+          "createdAt": "2026-04-30T07:50:29.437Z"
+        },
+        "createdAt": "2026-04-30T07:50:29.437Z",
+        "updatedAt": "2026-04-30T07:50:29.437Z"
+      },
+      "customer": {
+        "id": "cus_2595010b",
+        "name": "Nimal Perera",
+        "phone": "0771234567",
+        "createdAt": "2026-04-30T07:50:29.437Z"
+      },
+      "selectedPackage": {
+        "id": "pkg_8e7c31d1",
+        "name": "Wash + Vacuum",
+        "category": "Interior Cleaning",
+        "description": "Exterior wash with a practical cabin clean.",
+        "estimatedDurationMinutes": 65,
+        "basePrice": 5800,
+        "includedItemIds": "[\"item_6ae113fa\",\"item_9b790d3d\",\"item_402053f1\",\"item_9c82ad87\"]"
+      },
+      "statusLogs": [
+        {
+          "id": "log_bcf5de7d",
+          "serviceOrderId": "ord_c14f03d1",
+          "fromStatus": "Waiting",
+          "toStatus": "Washing Bay",
+          "note": "Demo status initialized",
+          "changedBy": "System",
+          "changedAt": "2026-04-30T07:50:29.437Z"
+        }
+      ]
+    },
+    {
+      "id": "ord_44714b2e",
+      "orderNumber": "JOB-1025",
+      "vehicleId": "veh_bf021089",
+      "customerId": "cus_725c7cd2",
+      "selectedPackageId": "pkg_437fd857",
+      "selectedItemIds": "[\"item_e5055e81\",\"item_64008d7e\",\"item_a8647b6b\",\"item_27ab5142\",\"item_0ba3eff0\",\"item_cb2fceb6\",\"item_63f32f3b\",\"item_7eb4d735\",\"item_6ae113fa\",\"item_9b790d3d\",\"item_a70e7cc8\"]",
+      "status": "Oil Change",
+      "currentStep": "Oil Change",
+      "progressPercentage": 45,
+      "priority": "High",
+      "assignedMechanic": "Lahiru",
+      "bay": "Bay 02",
+      "odometer": 47400,
+      "notes": "Seeded demo job",
+      "estimatedStartTime": "2026-04-30T06:24:29.437Z",
+      "estimatedFinishTime": "2026-04-30T11:08:29.437Z",
+      "actualStartTime": "2026-04-30T06:24:29.437Z",
+      "actualFinishTime": null,
+      "totalPrice": 38500,
+      "createdAt": "2026-04-30T06:24:29.437Z",
+      "updatedAt": "2026-04-30T07:50:29.437Z",
+      "completedAt": null,
+      "vehicle": {
+        "id": "veh_bf021089",
+        "plateNumber": "ABC-1234",
+        "normalizedPlateNumber": "ABC1234",
+        "make": "Honda",
+        "model": "Vezel",
+        "color": "Black",
+        "customerId": "cus_725c7cd2",
+        "customer": {
+          "id": "cus_725c7cd2",
+          "name": "Amanda Fernando",
+          "phone": "0764441199",
+          "createdAt": "2026-04-30T07:50:29.437Z"
+        },
+        "createdAt": "2026-04-30T07:50:29.437Z",
+        "updatedAt": "2026-04-30T07:50:29.437Z"
+      },
+      "customer": {
+        "id": "cus_725c7cd2",
+        "name": "Amanda Fernando",
+        "phone": "0764441199",
+        "createdAt": "2026-04-30T07:50:29.437Z"
+      },
+      "selectedPackage": {
+        "id": "pkg_437fd857",
+        "name": "Full Service",
+        "category": "Full Service",
+        "description": "Comprehensive scheduled service with diagnostics and finishing.",
+        "estimatedDurationMinutes": 210,
+        "basePrice": 38500,
+        "includedItemIds": "[\"item_e5055e81\",\"item_64008d7e\",\"item_a8647b6b\",\"item_27ab5142\",\"item_0ba3eff0\",\"item_cb2fceb6\",\"item_63f32f3b\",\"item_7eb4d735\",\"item_6ae113fa\",\"item_9b790d3d\",\"item_a70e7cc8\"]"
+      },
+      "statusLogs": [
+        {
+          "id": "log_7fb7d287",
+          "serviceOrderId": "ord_44714b2e",
+          "fromStatus": "Waiting",
+          "toStatus": "Oil Change",
+          "note": "Demo status initialized",
+          "changedBy": "System",
+          "changedAt": "2026-04-30T07:50:29.437Z"
+        }
+      ]
+    },
+    {
+      "id": "ord_b6b0e325",
+      "orderNumber": "JOB-1026",
+      "vehicleId": "veh_2b18d79f",
+      "customerId": "cus_a84c11f0",
+      "selectedPackageId": "pkg_0fbbb959",
+      "selectedItemIds": "[\"item_d121a4d8\",\"item_27562e7c\",\"item_a8647b6b\",\"item_5138bef9\",\"item_3b633d1c\",\"item_6ae113fa\"]",
+      "status": "Waiting",
+      "currentStep": "Waiting",
+      "progressPercentage": 10,
+      "priority": "Normal",
+      "assignedMechanic": "Dilan",
+      "bay": null,
+      "odometer": 59800,
+      "notes": "Seeded demo job",
+      "estimatedStartTime": "2026-04-30T05:41:29.437Z",
+      "estimatedFinishTime": "2026-04-30T09:36:29.437Z",
+      "actualStartTime": null,
+      "actualFinishTime": null,
+      "totalPrice": 18500,
+      "createdAt": "2026-04-30T05:41:29.437Z",
+      "updatedAt": "2026-04-30T07:50:29.437Z",
+      "completedAt": null,
+      "vehicle": {
+        "id": "veh_2b18d79f",
+        "plateNumber": "WP-CAR-2211",
+        "normalizedPlateNumber": "WPCAR2211",
+        "make": "Toyota",
+        "model": "Aqua",
+        "color": "Silver",
+        "customerId": "cus_a84c11f0",
+        "customer": {
+          "id": "cus_a84c11f0",
+          "name": "Kasun Silva",
+          "phone": "0715588001",
+          "createdAt": "2026-04-30T07:50:29.437Z"
+        },
+        "createdAt": "2026-04-30T07:50:29.437Z",
+        "updatedAt": "2026-04-30T07:50:29.437Z"
+      },
+      "customer": {
+        "id": "cus_a84c11f0",
+        "name": "Kasun Silva",
+        "phone": "0715588001",
+        "createdAt": "2026-04-30T07:50:29.437Z"
+      },
+      "selectedPackage": {
+        "id": "pkg_0fbbb959",
+        "name": "Normal Service",
+        "category": "Normal Service",
+        "description": "Routine maintenance with oil, fluids, filters, tyres, and wash.",
+        "estimatedDurationMinutes": 130,
+        "basePrice": 18500,
+        "includedItemIds": "[\"item_d121a4d8\",\"item_27562e7c\",\"item_a8647b6b\",\"item_5138bef9\",\"item_3b633d1c\",\"item_6ae113fa\"]"
+      },
+      "statusLogs": [
+        {
+          "id": "log_adb61996",
+          "serviceOrderId": "ord_b6b0e325",
+          "fromStatus": "Waiting",
+          "toStatus": "Waiting",
+          "note": "Demo status initialized",
+          "changedBy": "System",
+          "changedAt": "2026-04-30T07:50:29.437Z"
+        }
+      ]
+    },
+    {
+      "id": "ord_b21e7b3b",
+      "orderNumber": "JOB-1027",
+      "vehicleId": "veh_2096b48e",
+      "customerId": "cus_e59470d1",
+      "selectedPackageId": "pkg_f7a78678",
+      "selectedItemIds": "[\"item_6ae113fa\",\"item_48459dd1\",\"item_3078a87e\",\"item_2ee1d654\",\"item_f4e3ca80\",\"item_a70e7cc8\"]",
+      "status": "Final Check",
+      "currentStep": "Final Check",
+      "progressPercentage": 85,
+      "priority": "Normal",
+      "assignedMechanic": "Pradeep",
+      "bay": "Detail Bay",
+      "odometer": 72200,
+      "notes": "Seeded demo job",
+      "estimatedStartTime": "2026-04-30T04:58:29.437Z",
+      "estimatedFinishTime": "2026-04-30T09:54:29.437Z",
+      "actualStartTime": "2026-04-30T04:58:29.437Z",
+      "actualFinishTime": null,
+      "totalPrice": 24500,
+      "createdAt": "2026-04-30T04:58:29.437Z",
+      "updatedAt": "2026-04-30T07:50:29.437Z",
+      "completedAt": null,
+      "vehicle": {
+        "id": "veh_2096b48e",
+        "plateNumber": "CAA-7788",
+        "normalizedPlateNumber": "CAA7788",
+        "make": "Suzuki",
+        "model": "Swift",
+        "color": "Red",
+        "customerId": "cus_e59470d1",
+        "customer": {
+          "id": "cus_e59470d1",
+          "name": "Ruwan Jayasinghe",
+          "phone": "0752244668",
+          "createdAt": "2026-04-30T07:50:29.437Z"
+        },
+        "createdAt": "2026-04-30T07:50:29.437Z",
+        "updatedAt": "2026-04-30T07:50:29.437Z"
+      },
+      "customer": {
+        "id": "cus_e59470d1",
+        "name": "Ruwan Jayasinghe",
+        "phone": "0752244668",
+        "createdAt": "2026-04-30T07:50:29.437Z"
+      },
+      "selectedPackage": {
+        "id": "pkg_f7a78678",
+        "name": "Premium Detail",
+        "category": "Interior Cleaning",
+        "description": "Presentation-focused detail for handover-ready vehicles.",
+        "estimatedDurationMinutes": 160,
+        "basePrice": 24500,
+        "includedItemIds": "[\"item_6ae113fa\",\"item_48459dd1\",\"item_3078a87e\",\"item_2ee1d654\",\"item_f4e3ca80\",\"item_a70e7cc8\"]"
+      },
+      "statusLogs": [
+        {
+          "id": "log_f9857ce3",
+          "serviceOrderId": "ord_b21e7b3b",
+          "fromStatus": "Waiting",
+          "toStatus": "Final Check",
+          "note": "Demo status initialized",
+          "changedBy": "System",
+          "changedAt": "2026-04-30T07:50:29.437Z"
+        }
+      ]
+    },
+    {
+      "id": "ord_ef433a0e",
+      "orderNumber": "JOB-1028",
+      "vehicleId": "veh_74497376",
+      "customerId": "cus_e456f3bc",
+      "selectedPackageId": "pkg_7ff32205",
+      "selectedItemIds": "[\"item_6ae113fa\",\"item_aa0cf85c\",\"item_f4e3ca80\"]",
+      "status": "Ready for Delivery",
+      "currentStep": "Ready for Delivery",
+      "progressPercentage": 100,
+      "priority": "High",
+      "assignedMechanic": "Saman",
+      "bay": "Wash Bay",
+      "odometer": 84600,
+      "notes": "Seeded demo job",
+      "estimatedStartTime": "2026-04-30T04:15:29.437Z",
+      "estimatedFinishTime": "2026-04-30T07:37:29.437Z",
+      "actualStartTime": "2026-04-30T04:15:29.437Z",
+      "actualFinishTime": null,
+      "totalPrice": 2800,
+      "createdAt": "2026-04-30T04:15:29.437Z",
+      "updatedAt": "2026-04-30T07:50:29.437Z",
+      "completedAt": null,
+      "vehicle": {
+        "id": "veh_74497376",
+        "plateNumber": "KI-9090",
+        "normalizedPlateNumber": "KI9090",
+        "make": "Nissan",
+        "model": "Leaf",
+        "color": "Blue",
+        "customerId": "cus_e456f3bc",
+        "customer": {
+          "id": "cus_e456f3bc",
+          "name": "Chamath Wijesinghe",
+          "phone": "0729854100",
+          "createdAt": "2026-04-30T07:50:29.437Z"
+        },
+        "createdAt": "2026-04-30T07:50:29.437Z",
+        "updatedAt": "2026-04-30T07:50:29.437Z"
+      },
+      "customer": {
+        "id": "cus_e456f3bc",
+        "name": "Chamath Wijesinghe",
+        "phone": "0729854100",
+        "createdAt": "2026-04-30T07:50:29.437Z"
+      },
+      "selectedPackage": {
+        "id": "pkg_7ff32205",
+        "name": "Quick Car Wash",
+        "category": "Quick Wash",
+        "description": "Fast exterior refresh for daily-drive vehicles.",
+        "estimatedDurationMinutes": 35,
+        "basePrice": 2800,
+        "includedItemIds": "[\"item_6ae113fa\",\"item_aa0cf85c\",\"item_f4e3ca80\"]"
+      },
+      "statusLogs": [
+        {
+          "id": "log_42192dcc",
+          "serviceOrderId": "ord_ef433a0e",
+          "fromStatus": "Waiting",
+          "toStatus": "Ready for Delivery",
+          "note": "Demo status initialized",
+          "changedBy": "System",
+          "changedAt": "2026-04-30T07:50:29.437Z"
+        }
+      ]
+    }
+  ],
+  "statusLogs": [
+    {
+      "id": "log_bcf5de7d",
+      "serviceOrderId": "ord_c14f03d1",
+      "fromStatus": "Waiting",
+      "toStatus": "Washing Bay",
+      "note": "Demo status initialized",
+      "changedBy": "System",
+      "changedAt": "2026-04-30T07:50:29.437Z"
+    },
+    {
+      "id": "log_7fb7d287",
+      "serviceOrderId": "ord_44714b2e",
+      "fromStatus": "Waiting",
+      "toStatus": "Oil Change",
+      "note": "Demo status initialized",
+      "changedBy": "System",
+      "changedAt": "2026-04-30T07:50:29.437Z"
+    },
+    {
+      "id": "log_adb61996",
+      "serviceOrderId": "ord_b6b0e325",
+      "fromStatus": "Waiting",
+      "toStatus": "Waiting",
+      "note": "Demo status initialized",
+      "changedBy": "System",
+      "changedAt": "2026-04-30T07:50:29.437Z"
+    },
+    {
+      "id": "log_f9857ce3",
+      "serviceOrderId": "ord_b21e7b3b",
+      "fromStatus": "Waiting",
+      "toStatus": "Final Check",
+      "note": "Demo status initialized",
+      "changedBy": "System",
+      "changedAt": "2026-04-30T07:50:29.437Z"
+    },
+    {
+      "id": "log_42192dcc",
+      "serviceOrderId": "ord_ef433a0e",
+      "fromStatus": "Waiting",
+      "toStatus": "Ready for Delivery",
+      "note": "Demo status initialized",
+      "changedBy": "System",
+      "changedAt": "2026-04-30T07:50:29.437Z"
+    }
+  ],
+  "mechanics": [
+    {
+      "id": "mech_eb495181",
+      "name": "Saman",
+      "role": "Technician",
+      "activeJobs": 1
+    },
+    {
+      "id": "mech_bafc5adf",
+      "name": "Lahiru",
+      "role": "Technician",
+      "activeJobs": 2
+    },
+    {
+      "id": "mech_3e7ebfe6",
+      "name": "Dilan",
+      "role": "Technician",
+      "activeJobs": 3
+    },
+    {
+      "id": "mech_c5cdaf1a",
+      "name": "Pradeep",
+      "role": "Quality Lead",
+      "activeJobs": 4
+    }
+  ],
+  "bays": [
+    {
+      "id": "bay_708b5c0c",
+      "name": "Bay 01",
+      "type": "Service",
+      "status": "Busy"
+    },
+    {
+      "id": "bay_af8af1cf",
+      "name": "Bay 02",
+      "type": "Service",
+      "status": "Available"
+    },
+    {
+      "id": "bay_81e6b09a",
+      "name": "Wash Bay",
+      "type": "Wash",
+      "status": "Busy"
+    },
+    {
+      "id": "bay_aca6b21f",
+      "name": "Detail Bay",
+      "type": "Detail",
+      "status": "Available"
+    }
+  ],
+  "settings": {
+    "tvPrivacyMode": "masked"
+  }
+}

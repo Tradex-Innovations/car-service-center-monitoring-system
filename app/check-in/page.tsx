@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Camera, CheckCircle2, Loader2, Upload } from "lucide-react";
 import { Button, Card, Input, PageHeader } from "@/components/ui";
+import { detectPlateFromImage } from "@/lib/anpr";
 import { api } from "@/lib/api";
 import type { Vehicle } from "@/lib/types";
 
@@ -23,10 +24,7 @@ export default function CheckInPage() {
 
   async function detectPlate() {
     setDetecting(true);
-    const formData = new FormData();
-    if (file) formData.append("image", file);
-    const response = await fetch("/api/anpr", { method: "POST", body: formData });
-    const result = (await response.json()) as Detection;
+    const result = (await detectPlateFromImage(file)) as Detection;
     setDetection(result);
     setPlate(result.plateNumber);
     setDetecting(false);
@@ -36,10 +34,9 @@ export default function CheckInPage() {
     setSaving(true);
     setVehicle(null);
     setNotFound(false);
-    const response = await fetch(`/api/vehicles/${encodeURIComponent(plate)}`);
-    if (response.ok) {
-      setVehicle((await response.json()) as Vehicle);
-    } else {
+    try {
+      setVehicle(await api<Vehicle>(`/api/vehicles/${encodeURIComponent(plate)}`));
+    } catch {
       setNotFound(true);
     }
     setSaving(false);
@@ -51,7 +48,7 @@ export default function CheckInPage() {
       method: "POST",
       body: JSON.stringify({ ...form, plateNumber: plate })
     });
-    router.push(`/service-selection/${encodeURIComponent(saved.plateNumber)}?odometer=${form.odometer}`);
+    router.push(`/service-selection?plate=${encodeURIComponent(saved.plateNumber)}&odometer=${form.odometer}`);
   }
 
   return (
@@ -120,7 +117,7 @@ export default function CheckInPage() {
                 {vehicle.make} {vehicle.model} in {vehicle.color}, customer {vehicle.customer?.name}
               </p>
               <p className="mt-2 text-sm text-slate-500">Previous visits: {vehicle.orders?.length ?? 0}</p>
-              <Button className="mt-4 w-full" onClick={() => router.push(`/service-selection/${encodeURIComponent(vehicle.plateNumber)}`)}>
+              <Button className="mt-4 w-full" onClick={() => router.push(`/service-selection?plate=${encodeURIComponent(vehicle.plateNumber)}`)}>
                 Continue to Services
               </Button>
             </div>

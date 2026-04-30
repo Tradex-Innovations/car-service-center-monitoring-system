@@ -44,6 +44,26 @@ npm run dev
 
 Open `http://localhost:3000`.
 
+## GitHub Pages Hosting
+
+This project includes a static GitHub Pages deployment workflow at `.github/workflows/deploy-pages.yml`.
+
+For the hosted demo, the app runs in static mode and stores demo changes in the browser with `localStorage`. This is required because GitHub Pages does not run Next.js API routes or server-side JSON writes.
+
+Deployment steps:
+
+1. Create a new GitHub repository.
+2. Push this project to the `main` branch.
+3. In GitHub, open **Settings → Pages**.
+4. Set **Source** to **GitHub Actions**.
+5. Open the **Actions** tab and run **Deploy to GitHub Pages**, or push to `main`.
+
+The site will be available at:
+
+```text
+https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPOSITORY-NAME/
+```
+
 ## Client Demo Flow
 
 1. Open `/check-in`.

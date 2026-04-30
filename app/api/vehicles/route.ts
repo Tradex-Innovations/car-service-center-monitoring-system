@@ -3,6 +3,8 @@ import { normalizePlate } from "@/lib/utils";
 import { readStore, writeStore } from "@/lib/store";
 import type { Customer, Vehicle } from "@/lib/types";
 
+export const dynamic = "force-static";
+
 const id = (prefix: string) => `${prefix}_${crypto.randomUUID().slice(0, 8)}`;
 
 export async function GET() {

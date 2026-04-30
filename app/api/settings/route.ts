@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { readStore, writeStore } from "@/lib/store";
 
+export const dynamic = "force-static";
+
 export async function GET() {
   return NextResponse.json(readStore().settings);
 }
