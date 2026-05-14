@@ -72,7 +72,10 @@ export function ServiceSelectionClient({ plateFromPath }: { plateFromPath?: stri
                       setSelectedPackage(servicePackage);
                       setSelectedItems(included);
                     }}
-                    className={cn("rounded-2xl border bg-white p-5 text-left shadow-soft transition hover:-translate-y-0.5", active ? "border-ink ring-2 ring-ink/10" : "border-line")}
+                    className={cn(
+                      "glass-panel glass-hover rounded-[28px] p-5 text-left",
+                      active ? "border-ios-blue/50 ring-4 ring-ios-blue/10" : "border-white/55"
+                    )}
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div>
@@ -101,7 +104,10 @@ export function ServiceSelectionClient({ plateFromPath }: { plateFromPath?: stri
                   <button
                     key={item.id}
                     onClick={() => setSelectedItems(checked ? selectedItems.filter((id) => id !== item.id) : [...selectedItems, item.id])}
-                    className={cn("flex items-center justify-between rounded-xl border border-line bg-white p-4 text-left", checked && "border-ink bg-slate-50")}
+                    className={cn(
+                      "glass-surface flex items-center justify-between rounded-2xl p-4 text-left transition hover:bg-white/28",
+                      checked && "border-ios-blue/50 bg-white/36 ring-4 ring-ios-blue/10"
+                    )}
                   >
                     <div>
                       <p className="font-medium">{item.name}</p>
@@ -130,7 +136,7 @@ export function ServiceSelectionClient({ plateFromPath }: { plateFromPath?: stri
               <span className="text-slate-500">Estimated time</span>
               <span className="font-medium">{duration || 0} min</span>
             </div>
-            <div className="border-t border-line pt-4">
+            <div className="border-t border-white/50 pt-4">
               <p className="text-sm text-slate-500">Estimated price</p>
               <p className="mt-1 text-3xl font-semibold tracking-tight">{formatCurrency(total)}</p>
             </div>

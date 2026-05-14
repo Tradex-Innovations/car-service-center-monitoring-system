@@ -65,7 +65,7 @@ export default function MechanicPage() {
                           {order.vehicle?.color} {order.vehicle?.make} {order.vehicle?.model}
                         </p>
                       </div>
-                      <span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-semibold">{order.priority}</span>
+                      <span className="rounded-full border border-white/55 bg-white/28 px-2.5 py-1 text-xs font-semibold shadow-inner backdrop-blur-xl">{order.priority}</span>
                     </div>
                     <p className="mt-3 text-sm font-medium">{order.selectedPackage?.name ?? "Custom service"}</p>
                     <p className="mt-1 text-sm text-slate-500">Next: {next}</p>

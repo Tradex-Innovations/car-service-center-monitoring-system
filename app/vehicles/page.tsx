@@ -40,7 +40,7 @@ export default function VehiclesPage() {
             {filtered.map((vehicle) => (
               <button
                 key={vehicle.id}
-                className="w-full rounded-xl border border-line p-3 text-left transition hover:bg-slate-50"
+                className="glass-surface w-full rounded-2xl p-3 text-left transition hover:bg-white/28"
                 onClick={() => setSelected(vehicle)}
               >
                 <p className="font-semibold">{vehicle.plateNumber}</p>
@@ -93,7 +93,7 @@ export default function VehiclesPage() {
                 </div>
                 <div className="mt-5 space-y-3">
                   {(order.statusLogs ?? []).map((log) => (
-                    <div key={log.id} className="border-l-2 border-slate-200 pl-4">
+                    <div key={log.id} className="border-l-2 border-ios-blue/30 pl-4">
                       <p className="font-medium">
                         {log.fromStatus} to {log.toStatus}
                       </p>

@@ -53,13 +53,13 @@ export default function SettingsPage() {
           </div>
           <div className="grid gap-3 md:grid-cols-2">
             {packages.map((servicePackage) => (
-              <div key={servicePackage.id} className="rounded-2xl border border-line p-4">
+              <div key={servicePackage.id} className="glass-surface rounded-[24px] p-4">
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <p className="font-semibold">{servicePackage.name}</p>
                     <p className="text-sm text-slate-500">{servicePackage.category}</p>
                   </div>
-                  <button onClick={() => setPackages(packages.filter((item) => item.id !== servicePackage.id))} className="rounded-lg p-2 hover:bg-slate-100">
+                  <button onClick={() => setPackages(packages.filter((item) => item.id !== servicePackage.id))} className="rounded-xl p-2 transition hover:bg-white/28">
                     <Trash2 className="h-4 w-4" />
                   </button>
                 </div>

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ArrowRight, CarFront, ClipboardCheck, Monitor, Search, Wrench } from "lucide-react";
-import { Card, PageHeader, Progress, StatusBadge } from "@/components/ui";
+import { Card, PageHeader, Progress, StatCard, StatusBadge } from "@/components/ui";
 import { api } from "@/lib/api";
 import { formatCurrency, minutesRemaining } from "@/lib/utils";
 import type { ServiceOrder } from "@/lib/types";
@@ -28,10 +28,7 @@ export default function HomePage() {
           ["Completed today", orders.filter((job) => job.status === "Completed").length],
           ["Revenue estimate", formatCurrency(revenue)]
         ].map(([label, value]) => (
-          <Card key={label}>
-            <p className="text-sm text-slate-500">{label}</p>
-            <p className="mt-2 text-3xl font-semibold tracking-tight">{value}</p>
-          </Card>
+          <StatCard key={label} label={String(label)} value={value} />
         ))}
       </div>
 
@@ -45,8 +42,10 @@ export default function HomePage() {
           ["/admin", "Admin Analytics", "Review KPIs, workload, utilization, and demand.", ArrowRight]
         ].map(([href, title, body, Icon]) => (
           <Link key={String(href)} href={String(href)}>
-            <Card className="h-full transition hover:-translate-y-0.5 hover:border-slate-300">
-              <Icon className="h-6 w-6 text-slate-700" />
+            <Card className="glass-hover h-full">
+              <div className="grid h-11 w-11 place-items-center rounded-2xl border border-white/55 bg-white/28 text-ios-blue shadow-inner backdrop-blur-xl">
+                <Icon className="h-5 w-5" />
+              </div>
               <h2 className="mt-4 text-lg font-semibold">{String(title)}</h2>
               <p className="mt-2 text-sm leading-6 text-slate-500">{String(body)}</p>
             </Card>
@@ -63,7 +62,7 @@ export default function HomePage() {
         </div>
         <div className="grid gap-3">
           {active.slice(0, 5).map((order) => (
-            <div key={order.id} className="grid gap-3 rounded-xl border border-line p-4 md:grid-cols-[1.2fr_1fr_1fr_1.4fr] md:items-center">
+            <div key={order.id} className="glass-surface grid gap-3 rounded-2xl p-4 md:grid-cols-[1.2fr_1fr_1fr_1.4fr] md:items-center">
               <div>
                 <p className="font-semibold">{order.vehicle?.plateNumber}</p>
                 <p className="text-sm text-slate-500">

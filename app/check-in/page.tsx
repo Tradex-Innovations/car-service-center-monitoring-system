@@ -63,10 +63,10 @@ export default function CheckInPage() {
             </div>
             <Camera className="h-6 w-6 text-slate-500" />
           </div>
-          <label className="mt-5 grid min-h-72 cursor-pointer place-items-center rounded-2xl border border-dashed border-slate-300 bg-slate-50">
+          <label className="glass-surface mt-5 grid min-h-72 cursor-pointer place-items-center rounded-[28px] border-dashed transition hover:bg-white/28">
             {preview ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={preview} alt="Vehicle preview" className="max-h-72 rounded-2xl object-contain" />
+              <img src={preview} alt="Vehicle preview" className="max-h-72 rounded-[24px] object-contain" />
             ) : (
               <div className="text-center">
                 <Upload className="mx-auto h-8 w-8 text-slate-400" />
@@ -94,13 +94,13 @@ export default function CheckInPage() {
         <Card>
           <h2 className="text-lg font-semibold">Confirm Plate</h2>
           {detection ? (
-            <div className="mt-4 rounded-2xl bg-slate-50 p-4">
+            <div className="glass-surface mt-4 rounded-[24px] p-4">
               <p className="text-sm text-slate-500">{detection.provider}</p>
               <p className="mt-1 text-3xl font-semibold tracking-tight">{detection.plateNumber}</p>
               <p className="mt-1 text-sm font-medium text-emerald-700">{detection.confidence}% confidence</p>
             </div>
           ) : (
-            <div className="mt-4 rounded-2xl bg-slate-50 p-4 text-sm text-slate-500">Detected plate details will appear here.</div>
+            <div className="glass-surface mt-4 rounded-[24px] p-4 text-sm text-slate-500">Detected plate details will appear here.</div>
           )}
           <div className="mt-5 space-y-3">
             <Input placeholder="Plate number" value={plate} onChange={(event) => setPlate(event.target.value.toUpperCase())} />
@@ -111,7 +111,7 @@ export default function CheckInPage() {
           </div>
 
           {vehicle ? (
-            <div className="mt-5 rounded-2xl border border-line p-4">
+            <div className="glass-surface mt-5 rounded-[24px] p-4">
               <p className="font-semibold">Existing vehicle found</p>
               <p className="mt-1 text-sm text-slate-500">
                 {vehicle.make} {vehicle.model} in {vehicle.color}, customer {vehicle.customer?.name}
@@ -124,7 +124,7 @@ export default function CheckInPage() {
           ) : null}
 
           {notFound ? (
-            <div className="mt-5 space-y-3 rounded-2xl border border-line p-4">
+            <div className="glass-surface mt-5 space-y-3 rounded-[24px] p-4">
               <p className="font-semibold">New Vehicle</p>
               <div className="grid gap-3 sm:grid-cols-2">
                 <Input placeholder="Customer name" value={form.customerName} onChange={(e) => setForm({ ...form, customerName: e.target.value })} />
